@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu để căn giữa */
+    margin: 0;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Nền gradient hồng cam */
+    font-family: 'Dancing Script', cursive; /* Font chữ mềm mại */
+    overflow: hidden; /* Tránh thanh cuộn nếu có */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Nền trắng hơi trong suốt */
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInScale 1.5s ease-out; /* Hiệu ứng xuất hiện */
+}
+
+.greeting-link {
+    text-decoration: none; /* Xóa gạch chân mặc định của liên kết */
+    color: #e75480; /* Màu chữ hồng */
+    cursor: pointer; /* Biến con trỏ thành bàn tay khi rê chuột */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Hiệu ứng khi rê chuột */
+    display: block; /* Để toàn bộ khối <h1> và <p> là vùng click */
+}
+
+.greeting-link:hover {
+    color: #c9003c; /* Chuyển màu đậm hơn khi rê chuột */
+    transform: scale(1.05); /* Phóng to nhẹ khi rê chuột */
+}
+
+.greeting-text {
+    font-family: 'Pinyon Script', cursive; /* Font chữ kiểu viết tay */
+    font-size: 3.5em; /* Kích thước chữ lớn */
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.click-instruction {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
